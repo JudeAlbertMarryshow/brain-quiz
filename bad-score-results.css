@@ -89,13 +89,15 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 20px; /* Reduced from 50px to bring elements closer */
+  margin-top: 65px; /* Reduced from 50px to bring elements closer */
 }
 
-.quiz-results-container img{
+.quiz-results-container img {
   width: 280px;
   height: auto;
-} 
+  margin-bottom: 0; /* Ensure no bottom margin on images */
+  display: block; /* Block display helps control margins better */
+}
 
 .quiz-results-button {
   background-color: #fdb827; /* Same gold color as Results button in nav */
@@ -107,7 +109,6 @@ nav {
   transition: background-color 0.3s ease;
   width: 460px;
   font-weight: bold;
-  margin-top: 80px;
 }
 
 .quiz-results-button:hover {
@@ -116,7 +117,7 @@ nav {
 
 /* Container for the banner */
 .container {
-  margin-top: 10px; /* Reduced to bring closer to the button */
+  margin-top: -160px; /* Negative margin to pull content up */
   display: flex;
   justify-content: center;
 }
@@ -127,13 +128,16 @@ nav {
   max-width: 1200px;
   height: auto;
   display: block;
+  margin: 0; /* Remove any margin */
+  vertical-align: top; /* Prevents inline element spacing issues */
 }
 
 .banner-container {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 45px; /* Remove any margin */
+  padding: 0; /* Remove any padding */
   display: inline-block; /* This helps with containing absolute elements */
 }
 
@@ -161,4 +165,3 @@ nav {
   height: 150px;
   max-height: none !important;
 }
-
