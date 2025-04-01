@@ -1,3 +1,21 @@
 body {
-    background: url('images/start.webp') no-repeat center center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('bg image quiz.jpg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
 }
+
+.quiz-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
