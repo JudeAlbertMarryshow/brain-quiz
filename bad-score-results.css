@@ -40,7 +40,7 @@ img {
 /* Make navbar links look like buttons */
 nav a {
   text-decoration: none; /* Removes underline */
-  color: white; /* Text color */
+  color: black; /* Text color */
   font-size: 40px; /* Adjust size */
   background-color: #007bff; /* Default button background color */
   padding: 10px 20px; /* Padding inside the button */
@@ -55,29 +55,29 @@ nav a {
 
 /* Specific color for each link */
 nav ul li:nth-child(1) a {
-  background-color: #01f8d6; /* Neon blue for Home */
+  background-color: #f4b893; /* peach for Home */
 }
 
 nav ul li:nth-child(2) a {
-  background-color: #fc94df; /* Pink for Quiz */
+  background-color: #f393b1; /* Pink for Quiz */
 }
 
 nav ul li:nth-child(3) a {
-  background-color: #fdb827; /* Gold for Results */
+  background-color: #feb662; /* Gold for Results */
 }
 
 /* Hover effects */
 nav a:hover {
-  background-color: #0056b3; /* Darker shade when hovered */
+  background-color: ##feb662; /* Darker shade when hovered */
 }
 
 body {
-  border-left: 75px solid #fdb827;
-  border-right: 75px solid #fdb827;
+  border-left: 75px solid #f4f4f4;
+  border-right: 75px solid #f4f4f4;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #aec6ff;
+  background-color: #d4b2e4;
 }
 
 nav {
@@ -100,7 +100,7 @@ nav {
 }
 
 .quiz-results-button {
-  background-color: #fdb827; /* Same gold color as Results button in nav */
+  background-color: #feb662; /* Same gold color as Results button in nav */
   color: white;
   padding: 20px 25px;
   font-size: 46px;
@@ -148,7 +148,7 @@ nav {
   transform: translateX(-50%);
   font-size: 60px;
   font-weight: bold;
-  color: white; /* Darker color for better visibility inside the banner */
+  color: black; /* Darker color for better visibility inside the banner */
   text-align: center;
   padding-top: 20px;
 }
