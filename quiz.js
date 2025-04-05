@@ -66,6 +66,7 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const submitBtn = document.getElementById('submit-btn');
 const timerEl = document.getElementById('timer');
+const progressBar = document.getElementById('progress');  // The progress bar element
 
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', function() {
@@ -120,6 +121,15 @@ function showQuestion(index) {
   
   // Update buttons
   updateNavButtons();
+  
+  // Update progress bar
+  updateProgressBar();
+}
+
+// Update the progress bar
+function updateProgressBar() {
+  const progress = (currentQuestionIndex / (questions.length - 1)) * 100;
+  progressBar.style.width = `${progress}%`;
 }
 
 // Handle answer selection
@@ -140,7 +150,6 @@ function selectAnswer(answer) {
 function previousQuestion() {
   if (currentQuestionIndex > 0) {
     currentQuestionIndex--;
-    resetTimer();
     showQuestion(currentQuestionIndex);
   }
 }
@@ -149,7 +158,6 @@ function previousQuestion() {
 function nextQuestion() {
   if (currentQuestionIndex < questions.length - 1) {
     currentQuestionIndex++;
-    resetTimer();
     showQuestion(currentQuestionIndex);
   }
 }
@@ -187,11 +195,6 @@ function startTimer() {
       }
     }
   }, 1000);
-}
-
-function resetTimer() {
-  clearInterval(timerInterval);
-  startTimer();
 }
 
 function updateTimerDisplay() {
