@@ -241,6 +241,51 @@ nav a:hover {
     background-color: #324ad6;
 }
 
+
+/* Dark Mode Overrides */
+/* Full-page dark mode styles */
+/* Dark Mode Overrides */
+body.dark-mode {
+    background: #1c1c2a; /* Dark background */
+    color: white;        /* White text */
+    border-left: 75px solid #1c1c2a; /* Match the side borders with the dark background */
+    border-right: 75px solid #1c1c2a;
+  }
+  
+  body.dark-mode .full-container {
+    background-color: #3b3b5f;
+  }
+  
+  body.dark-mode .setting-container {
+    background-color: #4d4d71;
+    border-color: #7777a1;
+  }
+  
+  body.dark-mode .title-container {
+    background-color: #5c4b75;
+    color: white;
+    border-color: #ffffff88;
+  }
+  
+  body.dark-mode .save-button button,
+  body.dark-mode .font-btn {
+    background-color: #6c5ce7;
+  }
+  
+  /* Dark mode navbar */
+  body.dark-mode nav {
+    background-color: #2e2e3e; /* Darker navbar */
+  }
+  
+  body.dark-mode nav a {
+    color: white;
+    background-color: #4a4a6a; /* Dark buttons */
+  }
+  
+  body.dark-mode nav a:hover {
+    background-color: #5f5f8f; /* Lighter on hover */
+  }
+
 .characters {
     display: flex;
     justify-content: center;
