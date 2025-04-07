@@ -1,74 +1,82 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-ul {
-  list-style: none; /* Removes bullets */
-  display: flex;
-  gap: 300px;
-  padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
-}
-
-li {
-  display: inline; /* Ensures items are inline */
+body {
+    font-family: 'Quicksand', sans-serif;
+    border-left: 75px solid #fc94df;
+    border-right: 75px solid #fc94df;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #aec6ff, #fbe4ff);
 }
 
 nav {
-  width: 100%; /* Full width */
-  height: 100px; /* Set height */
-  background-color: #00c4cc; /* Example background color */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px; /* Adds spacing on the left and right */
-  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+    height: 100px;
+    background-color: #00c4cc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 -75px;
+    width: calc(100% + 150px);
 }
 
-img {
-  height: 120px;
-  width: auto;
+nav img {
+    height: 120px;
+    object-fit: contain;
+    align-self: center;
 }
 
 .flipped {
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
-/* Make navbar links look like buttons */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    align-items: center;
+}
+
+li {
+    display: inline;
+}
+
 nav a {
-  text-decoration: none; /* Removes underline */
-  color: white; /* Text color */
-  font-size: 40px; /* Adjust size */
-  background-color: #007bff; /* Default button background color */
-  padding: 10px 20px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  display: inline-block; /* Ensures proper spacing */
-  transition: background-color 0.3s ease-in-out; /* Smooth transition */
-  border-radius: 30px;
-  width: 220px;
-  text-align: center;
-  font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 2em; 
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    width: 220px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
 }
 
-/* Specific color for each link */
 nav ul li:nth-child(1) a {
-  background-color: #01f8d6; /* Neon blue for Home */
+    background-color: #01f8d6;
 }
 
 nav ul li:nth-child(2) a {
-  background-color: #fc94df; /* Pink for Quiz */
+    background-color: #fc94df;
 }
 
 nav ul li:nth-child(3) a {
-  background-color: #fdb827; /* Gold for Results */
+    background-color: #fdb827;
 }
 
-/* Hover effects */
+nav a.active {
+    box-shadow: 0 0 15px white;
+}
+
 nav a:hover {
-  background-color: #0056b3; /* Darker shade when hovered */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 body {
