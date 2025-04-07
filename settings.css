@@ -48,7 +48,7 @@ li {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 40px;
+    font-size: 2em; 
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 30px;
@@ -124,7 +124,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.2em;  /* em will grow/shrink with body font-size */
 }
 
 .switch {
@@ -241,10 +241,8 @@ nav a:hover {
     background-color: #324ad6;
 }
 
-
-/* Dark Mode Overrides */
 /* Full-page dark mode styles */
-/* Dark Mode Overrides */
+
 body.dark-mode {
     background: #1c1c2a; /* Dark background */
     color: white;        /* White text */
