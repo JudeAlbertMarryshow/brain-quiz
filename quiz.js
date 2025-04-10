@@ -189,7 +189,7 @@ function updateNavButtons() {
 
 // Timer functions
 function startTimer() {
-  timeLeft = 30;
+  timeLeft = 60;
   updateTimerDisplay();
 
   clearInterval(timerInterval);
