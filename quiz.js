@@ -53,11 +53,11 @@ let questions = [
   }
 ];
 
+// Author: Jude Marryshow - Start
 let userAnswers = [];
 let timerInterval;
 let timeLeft = 60;
 
-// DOM elements
 const currentQuestionEl = document.getElementById('current-question');
 const totalQuestionsEl = document.getElementById('total-questions');
 const questionTextEl = document.getElementById('question-text');
@@ -67,6 +67,7 @@ const nextBtn = document.getElementById('next-btn');
 const submitBtn = document.getElementById('submit-btn');
 const timerEl = document.getElementById('timer');
 const progressBar = document.getElementById('progress');
+// Author: Jude Marryshow - End
 
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', function() {
@@ -82,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.documentElement.style.fontSize = savedFontSize;
   }
 
+
+  // Author: Jude Marryshow - Start
   console.log("Quiz is initializing...");
 
   // Initialize user answers array with nulls
@@ -242,3 +245,4 @@ function finishQuiz() {
   // Go to results page
   window.location.href = 'results.html';
 }
+  // Author: Jude Marryshow - End
