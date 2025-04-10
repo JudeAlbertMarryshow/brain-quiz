@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Results</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script src="results.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <title>Results</title>
 </head>
 <body>
   <nav>
-    <img src="image.png" alt="Logo" class="nav-logo">
+    <img src="images/logo.webp" alt="Logo" class="nav-logo">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="results.html" class="active">Results</a></li>
-      <li><a href = "settings.html"> Settings </a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
     </ul>
-    <img src="images/logo.webp" alt="Logo" class="flipped nav-logo">
+    <img src="images/logo.webp" alt="Logo" class="flipped">
   </nav>
 
   <div class="quiz-results-container">
+    <img id="result-emoji" src="" alt="Result Emoji" class="nav-logo">
     <button class="quiz-results-button">Quiz Results</button>
+    <img id="result-message" src="" alt="Result Message" class="nav-logo">
   </div>
 
   <div class="container">
     <div class="banner-container">
       <img src="images/banner.svg" alt="Banner Shape" class="banner">
-      <div class="score-text">Your Score:</div>
+      <div class="score-text" style="top: 25% !important; margin-top: 10px !important;">Your Score:</div>
+      <div id="score-percentage" class="score-value">0</div>
       <img src="images/perc.webp" alt="Percentage" class="perc-image">
     </div>
   </div>
+  
+  <script src="results.js"></script>
 </body>
 </html>
