@@ -55,7 +55,7 @@ let questions = [
 
 let userAnswers = [];
 let timerInterval;
-let timeLeft = 30;
+let timeLeft = 60;
 
 // DOM elements
 const currentQuestionEl = document.getElementById('current-question');
