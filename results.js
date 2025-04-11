@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // === APPLY SAVED SETTINGS ===
+const savedDarkMode = localStorage.getItem("darkMode");
+const savedFontSize = localStorage.getItem("fontSize");
+
+if (savedDarkMode === "true") {
+  document.body.classList.add("dark-mode");
+}
+
+if (savedFontSize) {
+  document.documentElement.style.fontSize = savedFontSize;
+}
     // Hide elements initially until we determine which ones to show
     const resultEmoji = document.getElementById('result-emoji');
     const resultMessage = document.getElementById('result-message');
@@ -73,13 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('good-score');
     } else if (scoreNum >= 40) {
         // Medium score
-        if (resultEmoji) resultEmoji.src = 'images/meh.webp';
-        if (resultMessage) resultMessage.src = 'images/almost.webp';
+        if (resultEmoji) resultEmoji.src = 'images/meh.png';
+        if (resultMessage) resultMessage.src = 'images/almost.gif';
         document.body.classList.add('meh-score');
     } else {
         // Bad score
-        if (resultEmoji) resultEmoji.src = 'images/crying-img.webp';
-        if (resultMessage) resultMessage.src = 'images/luck-img.webp';
+        if (resultEmoji) resultEmoji.src = 'images/crying-img.png';
+        if (resultMessage) resultMessage.src = 'images/luck-img.png';
         document.body.classList.add('bad-score');
     }
   
