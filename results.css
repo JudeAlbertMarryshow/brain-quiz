@@ -1,66 +1,63 @@
 * {
   margin: 0;
   padding: 0;
-  border: none;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 300px;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  display: inline;
+body {
+  font-family: 'Quicksand', sans-serif;
+  border-left: 75px solid #fc94df;
+  border-right: 75px solid #fc94df;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #aec6ff, #fbe4ff);
 }
 
 nav {
-  width: 100%;
   height: 100px;
   background-color: #00c4cc;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  box-sizing: border-box;
+  margin: 0 -75px;
+  width: calc(100% + 150px);
 }
 
-img {
+nav img {
   height: 120px;
-  width: auto;
-  max-width: 100%; /* Prevent images from overflowing */
-  object-fit: contain; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures logo stays within the bounds */
+  align-self: center; /* Vertically aligns the logo */
 }
 
 .flipped {
   transform: scaleX(-1);
 }
 
-/* Make navbar links look like buttons */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Reduced gap for better alignment */
+  margin: 0; /* Ensure no unwanted space around the links */
+  align-items: center; /* Vertically centers the items */
+}
+
+li {
+  display: inline;
+}
+
 nav a {
   text-decoration: none;
   color: white;
-  font-size: 40px;
-  background-color: #007bff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background-color 0.3s ease-in-out;
-  border-radius: 30px;
-  width: 220px;
-  text-align: center;
+  font-size: 2em;
   font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  width: 220px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
 }
 
-/* Specific color for each link */
 nav ul li:nth-child(1) a {
   background-color: #01f8d6;
 }
@@ -73,181 +70,126 @@ nav ul li:nth-child(3) a {
   background-color: #fdb827;
 }
 
-/* Hover effects */
+nav a.active {
+  box-shadow: 0 0 15px white;
+}
+
 nav a:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-body {
-  border-left: 75px solid #fdb827;
-  border-right: 75px solid #fdb827;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: #aec6ff;
-}
-
-nav {
-  margin: 0 -75px;
-  width: calc(100% + 150px);
-}
- 
 .quiz-results-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-top: 25px;
-  padding: 0 20px; /* Add some padding */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.quiz-results-container img {
-  width: 280px;
-  height: auto;
-  max-height: 200px; /* Limit image height */
-  margin: 10px 0; /* Add margins for spacing */
-  object-fit: contain; /* Maintain aspect ratio */
+  margin-top: 30px;
 }
 
 .quiz-results-button {
-  background-color: #fdb827;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fd7d27;
   color: white;
   padding: 20px 25px;
-  font-size: 46px;
+  font-size: 2em;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 460px;
   font-weight: bold;
-  text-align: center;
-  margin: 10px; /* Add margin to prevent crowding */
-}
+  width: 400px;
+}  
 
 .quiz-results-button:hover {
-  background-color: #fdb827;
+  background-color: #fd7d27;
 }
 
-/* Container for the banner */
 .container {
-  margin-top: 40px; /* Changed from negative margin */
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 0 20px;
-}
-
-/* Banner styling */
-.banner {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  display: block;
-  margin: 0;
 }
 
 .banner-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .score-text {
   position: absolute;
-  top: 30%; /* Positioned near the top inside the banner */
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   color: white;
   text-align: center;
-  z-index: 10; /* Ensure text appears above the banner */
-  padding-top: 5px; /* Small padding from the top edge */
 }
 
-/* Score value styling */
-.score-value {
-  position: absolute;
-  bottom: 30%;
-  left: 40%; /* Adjusted from 51% to create more balanced spacing */
-  transform: translateX(-50%);
-  font-size: 130px;
-  font-weight: bold;
-  color: white;
-  z-index: 10;
-}
-
-/* Style for the percentage image */
 .perc-image {
   position: absolute;
-  bottom: 30%;
-  right: 40%; /* Adjusted from 35% to create more balanced spacing */
+  bottom: 25%;
+  right: 30%;
+  height: 150px;
   width: auto;
-  z-index: 10;
-  height: 150px !important;
-  max-height: none !important;
-  object-fit: contain;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 1200px) {
-  .quiz-results-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  ul {
-    gap: 50px;
-  }
-  
-  .score-value {
-    font-size: 100px;
-  }
-  
-  .perc-image {
-    height: 120px !important;
-  }
-}
-
+/* Responsive tweaks */
 @media (max-width: 768px) {
-  nav ul {
+  body {
+    border-left: 20px solid #fdb827;
+    border-right: 20px solid #fdb827;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  ul {
     gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   }
-  
-  nav a {
-    font-size: 30px;
-    width: 180px;
+
+  .quiz-results-button {
+    width: 90%;
+    font-size: 24px;
   }
-  
+
   .score-text {
-    font-size: 40px;
+    font-size: 30px;
   }
-  
-  .score-value {
-    position: absolute;
-    bottom: 30%;
-    right: 55%; /* Changed from 51% */
-    font-size: 130px;
-    font-weight: bold;
-    color: white;
-    z-index: 10;
-  }
-  
+
   .perc-image {
-    height: 90px !important;
-    right: 45%;
+    height: 100px;
+    right: 20%;
   }
 }
-
-/* Added styles for the different score results */
-.good-score .quiz-results-container {
-  background-color: rgba(1, 248, 214, 0.2); /* Light teal background */
+body.dark-mode {
+  background: #1c1c2a;
+  color: white;
+  border-left: 75px solid #1c1c2a;
+  border-right: 75px solid #1c1c2a;
 }
 
-.meh-score .quiz-results-container {
-  background-color: rgba(252, 148, 223, 0.2); /* Light pink background */
+body.dark-mode nav {
+  background-color: #2e2e3e;
 }
 
-.bad-score .quiz-results-container {
-  background-color: rgba(255, 99, 71, 0.2); /* Light red background */
+body.dark-mode nav a {
+  background-color: #4a4a6a;
+}
+
+body.dark-mode nav a:hover {
+  background-color: #5f5f8f;
 }
