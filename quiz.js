@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', async function() {
   let currentQuestionIndex = 0;
   let userAnswers = Array(questions.length).fill(null);
   let timerInterval;
-  let timeLeft = 30;
+  let timeLeft = 60;
 
   // Timer functions
   function startTimer() {
-    timeLeft = 30;
+    timeLeft = 60;
     updateTimerDisplay();
 
     clearInterval(timerInterval);
