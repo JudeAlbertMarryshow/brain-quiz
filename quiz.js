@@ -1,5 +1,3 @@
-console.log("Quiz.js started loading");
-
 // Variables to track quiz state
 let currentQuestionIndex = 0;
 let questions = [
@@ -55,11 +53,11 @@ let questions = [
   }
 ];
 
+// Author: Jude Marryshow - Start
 let userAnswers = [];
 let timerInterval;
-let timeLeft = 30;
+let timeLeft = 60;
 
-// DOM elements
 const currentQuestionEl = document.getElementById('current-question');
 const totalQuestionsEl = document.getElementById('total-questions');
 const questionTextEl = document.getElementById('question-text');
@@ -69,10 +67,10 @@ const nextBtn = document.getElementById('next-btn');
 const submitBtn = document.getElementById('submit-btn');
 const timerEl = document.getElementById('timer');
 const progressBar = document.getElementById('progress');
+// Author: Jude Marryshow - End
 
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("DOM fully loaded");
   // === APPLY SAVED USER SETTINGS ===
   const savedDarkMode = localStorage.getItem("darkMode");
   const savedFontSize = localStorage.getItem("fontSize");
@@ -85,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.documentElement.style.fontSize = savedFontSize;
   }
 
+
+  // Author: Jude Marryshow - Start
   console.log("Quiz is initializing...");
 
   // Initialize user answers array with nulls
@@ -107,9 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Show a specific question
 function showQuestion(index) {
-  console.log("showQuestion called with index:", index);
   const q = questions[index];
-  console.log("Question object:", q);
 
   // Set question number and text
   currentQuestionEl.textContent = index + 1;
@@ -194,7 +192,7 @@ function updateNavButtons() {
 
 // Timer functions
 function startTimer() {
-  timeLeft = 30;
+  timeLeft = 60;
   updateTimerDisplay();
 
   clearInterval(timerInterval);
@@ -247,3 +245,4 @@ function finishQuiz() {
   // Go to results page
   window.location.href = 'results.html';
 }
+  // Author: Jude Marryshow - End
