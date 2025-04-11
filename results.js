@@ -90,7 +90,7 @@ if (savedFontSize) {
     } else {
         // Bad score
         if (resultEmoji) resultEmoji.src = 'images/crying-img.webp';
-        if (resultMessage) resultMessage.src = 'images/luck-img.webp';
+        if (resultMessage) resultMessage.src = 'images/better-luck-next-time.webp';
         document.body.classList.add('bad-score');
     }
   
