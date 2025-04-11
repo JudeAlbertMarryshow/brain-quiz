@@ -1,3 +1,5 @@
+console.log("Quiz.js started loading");
+
 // Variables to track quiz state
 let currentQuestionIndex = 0;
 let questions = [
@@ -70,6 +72,7 @@ const progressBar = document.getElementById('progress');
 
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', function() {
+  console.log("DOM fully loaded");
   // === APPLY SAVED USER SETTINGS ===
   const savedDarkMode = localStorage.getItem("darkMode");
   const savedFontSize = localStorage.getItem("fontSize");
@@ -104,7 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Show a specific question
 function showQuestion(index) {
+  console.log("showQuestion called with index:", index);
   const q = questions[index];
+  console.log("Question object:", q);
 
   // Set question number and text
   currentQuestionEl.textContent = index + 1;
